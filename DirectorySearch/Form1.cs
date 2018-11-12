@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DirectorySearch.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,8 @@ namespace DirectorySearch
 {
     public partial class Form1 : Form
     {
+        List<PlaylistItem> playlist = new List<PlaylistItem>();
+
         public Form1()
         {
             InitializeComponent();
@@ -24,10 +27,28 @@ namespace DirectorySearch
             openFile.Filter = "All Files |*| .m4a |*.m4a";
             if(openFile.ShowDialog() == DialogResult.OK)
             {
+                playlist.Add(new PlaylistItem(openFile.SafeFileName, openFile.GetHashCode()));
+                Console.WriteLine(playlist[0].HashCode);
                 VideoPlayer.playlist.add("file:///"+ openFile.FileName, openFile.SafeFileName, null);
+                
             }
         }
 
+        private void Playlist_btn_Click(object sender, EventArgs e)
+        {
+            playlistView.LoadPlaylist(playlist);
+        }
 
+        public void ChangeVideo()
+        {
+            
+            VideoPlayer.playlist.stop();
+            VideoPlayer.playlist.playItem(playlist[0].HashCode);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
