@@ -42,5 +42,17 @@ namespace DirectorySearch
         {
             VideoPlayer.playlist.stop();
         }
+
+        private void Volume_btn_Click(object sender, EventArgs e)
+        {
+            trackBar1.Enabled = !trackBar1.Enabled;
+            trackBar1.Visible = !trackBar1.Visible;
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            VideoPlayer.volume = trackBar1.Value * 10 ;
+        }
+
     }
 }
