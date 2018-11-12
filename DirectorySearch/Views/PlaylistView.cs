@@ -7,37 +7,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
 using DirectorySearch.Models;
 
 namespace DirectorySearch.Views
 {
     public partial class PlaylistView : UserControl
     {
+        public event EventHandler ChangeItem_Event;
+
         public PlaylistView()
         {
             InitializeComponent();
         }
 
-        internal void LoadPlaylist(PlaylistItem playlist)
+        private void Play_btn_Click(object sender, EventArgs e)
         {
-               
-        }
-
-        private void Load_Video_btn_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Cancel_btn_Click(object sender, EventArgs e)
-        {
-            UnFocusView();           
+            if (ChangeItem_Event != null)
+            {
+                ChangeItem_Event(this, new EventArgs());
+            }
+            UnFocusView();
         }
 
         internal void LoadPlaylist(List<PlaylistItem> playlist)
         {
             FocusView();
-            Playlist_Listbox.DataSource = playlist;
-            Playlist_Listbox.DisplayMember = "title";
+            Playlist_listbox.DataSource = playlist;
+            Playlist_listbox.DisplayMember = "title";
+            Playlist_listbox.ValueMember = "Id";
         }
 
         private void FocusView()
@@ -49,9 +47,20 @@ namespace DirectorySearch.Views
 
         private void UnFocusView()
         {
-            Playlist_Listbox.DataSource = null;
+            Playlist_listbox.DataSource = null;
             this.Enabled = false;
             this.Visible = false;
+        }
+
+        private void Cancel_btn_Click(object sender, EventArgs e)
+        {
+            UnFocusView();
+        }
+
+        public int GetSelectedItem()
+        {
+
+            return (int)Playlist_listbox.SelectedValue;
         }
     }
 }

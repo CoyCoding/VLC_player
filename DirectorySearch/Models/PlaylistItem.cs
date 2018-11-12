@@ -8,14 +8,14 @@ namespace DirectorySearch.Models
 {
     class PlaylistItem
     {
-        public PlaylistItem(string title, int hashCode)
+        public PlaylistItem(int id, string fileName)
         {
-            Title = title;
-            HashCode = hashCode;
+            Id = id;
+            Title = fileName;
         }
 
-        public string Title { get; set; }
+        public int Id { get; set; }
 
-        public int HashCode { get; set; }
+        public string Title { get; set; }
     }
 }

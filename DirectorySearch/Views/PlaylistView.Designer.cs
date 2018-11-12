@@ -28,40 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Playlist_Listbox = new System.Windows.Forms.ListBox();
-            this.Load_Video_btn = new System.Windows.Forms.Button();
+            this.Playlist_listbox = new System.Windows.Forms.ListBox();
+            this.Play_btn = new System.Windows.Forms.Button();
             this.Cancel_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Playlist_Listbox
+            // Playlist_listbox
             // 
-            this.Playlist_Listbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Playlist_Listbox.FormattingEnabled = true;
-            this.Playlist_Listbox.Location = new System.Drawing.Point(3, 1);
-            this.Playlist_Listbox.Name = "Playlist_Listbox";
-            this.Playlist_Listbox.Size = new System.Drawing.Size(704, 459);
-            this.Playlist_Listbox.TabIndex = 0;
+            this.Playlist_listbox.FormattingEnabled = true;
+            this.Playlist_listbox.Location = new System.Drawing.Point(0, 3);
+            this.Playlist_listbox.Name = "Playlist_listbox";
+            this.Playlist_listbox.Size = new System.Drawing.Size(645, 511);
+            this.Playlist_listbox.TabIndex = 0;
             // 
-            // Load_Video_btn
+            // Play_btn
             // 
-            this.Load_Video_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Load_Video_btn.Location = new System.Drawing.Point(728, 24);
-            this.Load_Video_btn.Name = "Load_Video_btn";
-            this.Load_Video_btn.Size = new System.Drawing.Size(75, 23);
-            this.Load_Video_btn.TabIndex = 1;
-            this.Load_Video_btn.Text = "button1";
-            this.Load_Video_btn.UseVisualStyleBackColor = true;
-            this.Load_Video_btn.Click += new System.EventHandler(this.Load_Video_btn_Click);
+            this.Play_btn.Location = new System.Drawing.Point(695, 35);
+            this.Play_btn.Name = "Play_btn";
+            this.Play_btn.Size = new System.Drawing.Size(75, 23);
+            this.Play_btn.TabIndex = 1;
+            this.Play_btn.Text = "button1";
+            this.Play_btn.UseVisualStyleBackColor = true;
+            this.Play_btn.Click += new System.EventHandler(this.Play_btn_Click);
             // 
             // Cancel_btn
             // 
-            this.Cancel_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Cancel_btn.Location = new System.Drawing.Point(728, 64);
+            this.Cancel_btn.Location = new System.Drawing.Point(695, 78);
             this.Cancel_btn.Name = "Cancel_btn";
             this.Cancel_btn.Size = new System.Drawing.Size(75, 23);
             this.Cancel_btn.TabIndex = 2;
-            this.Cancel_btn.Text = "button1";
+            this.Cancel_btn.Text = "button2";
             this.Cancel_btn.UseVisualStyleBackColor = true;
             this.Cancel_btn.Click += new System.EventHandler(this.Cancel_btn_Click);
             // 
@@ -70,18 +66,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.Cancel_btn);
-            this.Controls.Add(this.Load_Video_btn);
-            this.Controls.Add(this.Playlist_Listbox);
+            this.Controls.Add(this.Play_btn);
+            this.Controls.Add(this.Playlist_listbox);
             this.Name = "PlaylistView";
-            this.Size = new System.Drawing.Size(829, 463);
+            this.Size = new System.Drawing.Size(816, 515);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox Playlist_Listbox;
-        private System.Windows.Forms.Button Load_Video_btn;
+        private System.Windows.Forms.ListBox Playlist_listbox;
+        private System.Windows.Forms.Button Play_btn;
         private System.Windows.Forms.Button Cancel_btn;
     }
 }
