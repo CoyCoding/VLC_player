@@ -39,6 +39,9 @@
             // 
             // VideoPlayer
             // 
+            this.VideoPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.VideoPlayer.Enabled = true;
             this.VideoPlayer.Location = new System.Drawing.Point(12, 12);
             this.VideoPlayer.Name = "VideoPlayer";
@@ -48,6 +51,7 @@
             // 
             // Load_btn
             // 
+            this.Load_btn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Load_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Load_btn.Location = new System.Drawing.Point(12, 434);
             this.Load_btn.Name = "Load_btn";
@@ -59,6 +63,7 @@
             // 
             // Stop_btn
             // 
+            this.Stop_btn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Stop_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Stop_btn.Location = new System.Drawing.Point(636, 434);
             this.Stop_btn.Name = "Stop_btn";
@@ -70,6 +75,7 @@
             // 
             // Pause_btn
             // 
+            this.Pause_btn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Pause_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pause_btn.Location = new System.Drawing.Point(428, 434);
             this.Pause_btn.Name = "Pause_btn";
@@ -81,6 +87,7 @@
             // 
             // Play_btn
             // 
+            this.Play_btn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Play_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Play_btn.Location = new System.Drawing.Point(220, 434);
             this.Play_btn.Name = "Play_btn";
