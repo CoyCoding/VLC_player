@@ -28,31 +28,6 @@ namespace DirectorySearch
             }
         }
 
-        private void Play_btn_Click(object sender, EventArgs e)
-        {
-            VideoPlayer.playlist.play();
-        }
-
-        private void Pause_btn_Click(object sender, EventArgs e)
-        {
-            VideoPlayer.playlist.pause();
-        }
-
-        private void Stop_btn_Click(object sender, EventArgs e)
-        {
-            VideoPlayer.playlist.stop();
-        }
-
-        private void Volume_btn_Click(object sender, EventArgs e)
-        {
-            trackBar1.Enabled = !trackBar1.Enabled;
-            trackBar1.Visible = !trackBar1.Visible;
-        }
-
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
-            VideoPlayer.volume = trackBar1.Value * 10 ;
-        }
 
     }
 }
