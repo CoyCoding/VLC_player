@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Load_btn = new System.Windows.Forms.Button();
             this.Playlist_btn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Previous_btn = new System.Windows.Forms.Button();
             this.next_btn = new System.Windows.Forms.Button();
             this.VideoPlayer = new AxAXVLC.AxVLCPlugin2();
             this.playlistView = new DirectorySearch.Views.PlaylistView();
@@ -63,23 +63,25 @@
             this.Playlist_btn.UseVisualStyleBackColor = true;
             this.Playlist_btn.Click += new System.EventHandler(this.Playlist_btn_Click);
             // 
-            // button1
+            // Previous_btn
             // 
-            this.button1.Location = new System.Drawing.Point(222, 443);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 28);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Previous_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Previous_btn.Location = new System.Drawing.Point(222, 443);
+            this.Previous_btn.Name = "Previous_btn";
+            this.Previous_btn.Size = new System.Drawing.Size(90, 28);
+            this.Previous_btn.TabIndex = 4;
+            this.Previous_btn.Text = "Previous";
+            this.Previous_btn.UseVisualStyleBackColor = true;
+            this.Previous_btn.Click += new System.EventHandler(this.Previous_btn_Click);
             // 
             // next_btn
             // 
-            this.next_btn.Location = new System.Drawing.Point(343, 443);
+            this.next_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.next_btn.Location = new System.Drawing.Point(327, 443);
             this.next_btn.Name = "next_btn";
             this.next_btn.Size = new System.Drawing.Size(84, 27);
             this.next_btn.TabIndex = 5;
-            this.next_btn.Text = "button2";
+            this.next_btn.Text = "Next";
             this.next_btn.UseVisualStyleBackColor = true;
             this.next_btn.Click += new System.EventHandler(this.next_btn_Click);
             // 
@@ -114,7 +116,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 477);
             this.Controls.Add(this.next_btn);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Previous_btn);
             this.Controls.Add(this.Playlist_btn);
             this.Controls.Add(this.Load_btn);
             this.Controls.Add(this.VideoPlayer);
@@ -132,7 +134,7 @@
         private AxAXVLC.AxVLCPlugin2 VideoPlayer;
         private System.Windows.Forms.Button Load_btn;
         private System.Windows.Forms.Button Playlist_btn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Previous_btn;
         private System.Windows.Forms.Button next_btn;
         private Views.PlaylistView playlistView;
     }

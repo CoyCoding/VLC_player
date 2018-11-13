@@ -21,6 +21,7 @@ namespace DirectorySearch
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void Load_btn_Click(object sender, EventArgs e)
@@ -59,6 +60,11 @@ namespace DirectorySearch
         private void next_btn_Click(object sender, EventArgs e)
         {
             VideoPlayer.playlist.next();
+        }
+
+        private void Previous_btn_Click(object sender, EventArgs e)
+        {
+            VideoPlayer.playlist.prev();
         }
     }
 }
